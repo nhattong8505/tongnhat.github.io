@@ -1,0 +1,686 @@
+/* =========================
+   CÀI ĐẶT CHUNG
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: linear-gradient(135deg, #1c1c1c, #333333);
+    color: white;
+    padding: 60px 20px;
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.avatar img {
+    width: 220px;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid #d4af37;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.header-info h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.header-info h2 {
+    color: #d4af37;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.contact p {
+    font-size: 15px;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+nav {
+    background-color: #111;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    padding: 18px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 50px 20px;
+}
+
+section {
+    background-color: white;
+
+    padding: 40px;
+
+    margin-bottom: 35px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+    color: #222;
+
+    font-size: 28px;
+
+    margin-bottom: 30px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 3px solid #d4af37;
+
+    display: inline-block;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.timeline {
+    border-left: 4px solid #d4af37;
+
+    padding-left: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+
+    background-color: #d4af37;
+
+    border-radius: 50%;
+
+    left: -39px;
+
+    top: 8px;
+}
+
+.timeline-item span {
+    color: #b18b20;
+
+    font-weight: bold;
+}
+
+.timeline-item h3 {
+    margin-top: 5px;
+
+    color: #333;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience-item {
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.year {
+    font-weight: bold;
+
+    color: #b18b20;
+
+    font-size: 18px;
+}
+
+.experience-content h3 {
+    font-size: 21px;
+
+    color: #222;
+
+    margin-bottom: 5px;
+}
+
+.experience-content h4 {
+    color: #777;
+
+    margin-bottom: 15px;
+}
+
+.experience-content ul {
+    padding-left: 20px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 50px;
+}
+
+.skill-card {
+    padding: 25px;
+
+    background-color: #fafafa;
+
+    border-left: 5px solid #d4af37;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   FOOD SKILLS
+========================= */
+
+.food-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.food-card {
+    background-color: #222;
+
+    color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    min-height: 200px;
+
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+}
+
+.food-card h3 {
+    color: #d4af37;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   PERSONAL SKILLS
+========================= */
+
+.personal-skills {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.personal-skills div {
+    padding: 15px;
+
+    background-color: #fafafa;
+
+    border-radius: 6px;
+}
+
+
+/* =========================
+   CERTIFICATE
+========================= */
+
+.certificate-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.certificate {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 20px;
+
+    background-color: #fafafa;
+
+    border-radius: 8px;
+}
+
+.certificate span {
+    background-color: #222;
+
+    color: #d4af37;
+
+    font-weight: bold;
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    min-width: 80px;
+
+    text-align: center;
+}
+
+.certificate p {
+    margin: 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #111;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+footer h2 {
+    color: #d4af37;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+.copyright {
+    margin-top: 25px !important;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE - TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-info h1 {
+        font-size: 38px;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE - MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 40px 20px;
+    }
+
+    .header-container {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .avatar img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .header-info h1 {
+        font-size: 32px;
+    }
+
+    .header-info h2 {
+        font-size: 16px;
+    }
+
+    .contact {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    nav {
+        gap: 15px;
+
+        font-size: 13px;
+    }
+
+    section {
+        padding: 25px 20px;
+    }
+
+    .experience-item {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .personal-skills {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+}
+#gallery {
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;   /* Khung vuông */
+    object-fit: contain;   /* Hiển thị toàn bộ ảnh */
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.gallery-item p {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+/* =========================
+   HÌNH ẢNH TRÊN ĐIỆN THOẠI
+========================= */
+
+@media (max-width: 700px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 250px;
+    }
+
+}
+.contact-info {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #444;
+    line-height: 1.8;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+.certificate-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.certificate-list {
+    flex: 1;
+}
+
+
+/* Giữ nguyên kiểu ô năm như hình của bạn */
+.certificate-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.year {
+    width: 80px;
+    height: 45px;
+    background: #222;
+    color: #e6b800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+
+/* Ảnh bên phải */
+.certificate-image {
+    width: 300px;
+}
+
+.certificate-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+#certificate {
+    background: linear-gradient(135deg, #ffffff, #fff8e1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+
+/* Tiêu đề */
+#certificate h2 {
+    color: #222;
+    font-weight: 700;
+}
+
+
+/* Đường gạch dưới tiêu đề */
+#certificate h2::after {
+    background: #e6b800;
+}
+
+
+/* Từng dòng chứng chỉ */
+.certificate-item {
+    background: #fafafa;
+    border-left: 5px solid #e6b800;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+
+/* Hiệu ứng khi rê chuột */
+.certificate-item:hover {
+    background: #fff4cc;
+    transform: translateX(5px);
+}
+
+
+/* Ô năm */
+.year {
+    background: #222;
+    color: #f4c430;
+    width: 80px;
+    height: 45px;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Nội dung chữ */
+.certificate-item p {
+    color: #333;
+    font-size: 17px;
+}
